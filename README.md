@@ -1,1 +1,1 @@
-read me file in simple shell
+# C - Simple Shell
