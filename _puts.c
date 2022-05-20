@@ -1,16 +1,22 @@
 #include "shell.h"
 
 /**
- * _puts - Prints a string to stdout
- * @str: String to be printed
- *
- * Return: Number of chars printed
-*/
-int _puts(char *str)
+ * _puts     -  print a string
+ * @str : pointer to char
+ * Return:  void
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+void _puts(char *str)
 {
-	int len = _strlen(str);
+	int i = 0;
 
-	write(STDOUT_FILENO, str, len);
+	while (*(str + i) != '\0')
+	{
+		_putchar(*(str + i));
+		i++;
 
-	return (len);
+
+	}
+		_putchar('\n');
+
 }
